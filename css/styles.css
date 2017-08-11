@@ -46,3 +46,27 @@ nav a {
   color: red;
   text-decoration: none;     /*Ningun tipo de decoration como subrayado*/
 }
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.portada {
+  /*border: 10px solid red;*/
+  position: relative;
+}
+
+.portada .description {
+  background: rgba(255, 255, 255, .8);      /*Esta da un color con la conbinacion de rojo, verde y azul con la transparencia que es .8*/
+  /*opacity: .5;*/                  /*Forma de dar transparencia a un elemento*/
+  position: absolute;         /*Si utilizamos una position: absolute esta se refiere con su padre relativo que seria .portada*/
+  bottom: 30px;
+  left: 20px;
+  padding: 20px;
+}
+
+.blog {
+  width: 1000px;
+  margin: auto;     /*Forma de centrar elementos con un tamaño de ancho predefinido*/
+}
