@@ -1,5 +1,5 @@
 # Desafio-blog
 
-Desafio Plazi Blog
+Desafio Blog
 
 Pasar imagenes a HTML Y CSS
