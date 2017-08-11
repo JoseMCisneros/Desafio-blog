@@ -10,12 +10,41 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  height: 70px;
+}
+
+.header-right {
+  height: inherit;        /*Hereda el tamaño de su elemento padre*/
+  display: flex;
+  align-items: center;
+}
+
+.header-right .button {
+  margin-left: 5px;
+}
+
+.button {                 /*Estilo base del boton*/
+  background: gray;
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .2);
+  /*border-bottom: 5px solid black;*/
+  font-size: 14px;
+  padding: 5px 10px 10px;
+  border-radius: 5px;           /*Bordes redondeados*/
+  text-decoration: none;
+  color: white;
+  transition: .2s;        /*Una transicion de .2 segundos*/
+}
+
+.button:active {            /*El boton cambiara de tamaño al darle clic*/
+  transform: scale(.9);
+}
+
+.button.red {
+  background: #ff4842;
 }
 
 nav {
-  height: 84px;
-  display: flex;
-  align-items: center;
+  height: inherit;                      /*Hereda el tamaño de su elemento padre*/
   /*float: right;*/
   /*position: absolute;
   right: 0;*/
@@ -23,19 +52,22 @@ nav {
 
 nav ul {
   display: flex;      /*Acomodamos los elementos uno al costado del otro*/
+  margin: 0;
+  height: inherit;
 }
 
 nav li {
   list-style: none;      /*Esto hace que no tenga ningun tipo de estilo las listas*/
   /*margin: 0 10px;*/
-  font-size: 20px;
   color: black;
+  height: inherit;
+  display: flex;
+  align-items: center;
 }
 
 nav li::after {
   content: '|';
   display: inline-block;        /*Para poner margenes a los elementos ocupamos el display: inline block;*/
-  margin: 0 20px;
 }
 
 nav li:last-child::after {      /*Quitamos el content '|' del ultimo elemento */
@@ -43,8 +75,24 @@ nav li:last-child::after {      /*Quitamos el content '|' del ultimo elemento */
 }
 
 nav a {
-  color: red;
+  color: #ff4842;
   text-decoration: none;     /*Ningun tipo de decoration como subrayado*/
+  height: inherit;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  /*border-top: 5px solid transparent;*/
+}
+
+nav a:hover {                       /*:hover Solamente cuando el cursor este sobre el elemento se mostrara el estilo dentro*/
+  /*box-shadow: lugar donde se ubica la sombra, x, y, difuminado, color;*/
+  box-shadow: inset 0 5px 0 red !important;
+  /*border-top: 5px solid #ff4842;*/
+}
+
+nav a.is-active {
+  box-shadow: inset 0 5px 0 #7dcd40;
 }
 
 h1 {
@@ -53,7 +101,7 @@ h1 {
 }
 
 .portada {
-  /*border: 10px solid red;*/
+  /*border: 10px solid #ff4842;*/
   position: relative;
 }
 
