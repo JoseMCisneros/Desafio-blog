@@ -1,3 +1,48 @@
 body {
-  background: gray;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background: #F2F2F2;
+  /*height: 100px;*/
+  display: flex;                        /*Si se quiere utilizar justify primero tenemos que poner un display: flex;*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  /*float: right;*/
+  /*position: absolute;
+  right: 0;*/
+}
+
+nav ul {
+  display: flex;      /*Acomodamos los elementos uno al costado del otro*/
+}
+
+nav li {
+  list-style: none;      /*Esto hace que no tenga ningun tipo de estilo las listas*/
+  /*margin: 0 10px;*/
+  font-size: 20px;
+  color: black;
+}
+
+nav li::after {
+  content: '|';
+  display: inline-block;        /*Para poner margenes a los elementos ocupamos el display: inline block;*/
+  margin: 0 20px;
+}
+
+nav li:last-child::after {      /*Quitamos el content '|' del ultimo elemento */
+  display: none
+}
+
+nav a {
+  color: red;
+  text-decoration: none;     /*Ningun tipo de decoration como subrayado*/
 }
