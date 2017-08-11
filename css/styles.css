@@ -1,14 +1,19 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  color: #515151;
+}
+
+a {
+  color: #515151;
 }
 
 header {
   background: #F2F2F2;
   /*height: 100px;*/
   display: flex;                        /*Si se quiere utilizar justify primero tenemos que poner un display: flex;*/
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between;       /*Espacio entre elementos*/
+  align-items: center;                  /*Alianeado vertical*/
   padding: 0 20px;
   height: 70px;
 }
@@ -98,18 +103,20 @@ nav a.is-active {
 h1 {
   margin: 0;
   font-weight: 600;
+  margin-bottom: 10px
 }
 
 .portada {
   /*border: 10px solid #ff4842;*/
   position: relative;
+  height: 525px;
 }
 
 .portada .description {
   background: rgba(255, 255, 255, .8);      /*Esta da un color con la conbinacion de rojo, verde y azul con la transparencia que es .8*/
   /*opacity: .5;*/                  /*Forma de dar transparencia a un elemento*/
   position: absolute;         /*Si utilizamos una position: absolute esta se refiere con su padre relativo que seria .portada*/
-  bottom: 30px;
+  bottom: 25px;
   left: 20px;
   padding: 20px;
 }
@@ -132,4 +139,59 @@ h1 {
 
 .item-blog {            /*Le damos un tamaño definido a los items*/
   width: 300px;
+  margin: 20px 0;
+}
+
+.paginador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.paginador ul {     /*Para que los ul se pongan al lado del span*/
+  display: flex;
+  list-style: none;     /*Quita los puntos que vienen con los ul*/
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.paginador li {
+  background: #eaeaea;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid gray;
+  margin: 0 5px;
+}
+
+.paginador li.selected {
+  border-color: transparent;
+  background: white;
+}
+
+.paginador a {
+  text-decoration: none;
+  display: block;
+  height: inherit;
+  padding: 0 10px;
+}
+
+.autor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-top: 1px solid gray;
+  padding-top: 10px;
+}
+
+.autor img {
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.autor p {
+  margin: 0;
 }
