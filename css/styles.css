@@ -70,3 +70,18 @@ h1 {
   width: 1000px;
   margin: auto;     /*Forma de centrar elementos con un tamaño de ancho predefinido*/
 }
+
+.blog-items {
+  display: flex;        /*Las imagenes estan una junto a la otra*/
+  flex-wrap: wrap;      /*Cuando un elemento ya no tuvo espacion en la misma linea el siguiente elemento se pone en otra linea por debajo*/
+  justify-content: space-between;
+}
+
+.blog-items h3 {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.item-blog {            /*Le damos un tamaño definido a los items*/
+  width: 300px;
+}
